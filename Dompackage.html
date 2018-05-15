@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Domestic-Package</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UAx-Compatible" content="ie=edge">
+    	<link rel="icon" type="image/png" href="Titlelogo.png">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    	<style>
+    		body,html
+      		{
+        		background-color: #7FFFD4;
+      		}
+      </style>
+	</head>
+	<body>
+		<div class="block" style="width: 50%; margin-left:300px;">
+      <div class="box" >
+			<h1 class="title is-3" style="text-decoration: underline; text-align: center;">Domestic-Package Detail.....</h1>
+			<form id="domestic">
+        <div class="columns">
+      		<div class="column">  
+        		<div class="field">
+              <label class="label">Package-id</label>
+              <p class="control has-icons-left">
+                    		<input class="input" type="text" placeholder="Enter Package-id" id="domid">
+                      			<span class="icon is-small is-left">
+                        			<i class="fa-id-badge"></i>
+                      			</span>
+                   			</p>
+              			</div> 
+              		</div>
+              	</div>
+
+
+              	<div class="columns">   
+              		<div class="column">   
+        				<div class="field">
+                		<label class="label">Package-Name</label>
+                  			<p class="control has-icons-left">
+                    		<input class="input" type="text" placeholder="Enter Package Name....." id="domname">
+                      			<span class="icon is-small is-left">
+                        			<i class="fa fa-font"></i>
+                      			</span>
+                   			</p>
+              			</div>
+              		</div>
+              	</div>
+
+
+              	<div class="columns">	 
+              		<div class="column">   
+        				<div class="field">
+                		<label class="label">Package-Image</label>
+                  			<p class="control has-icons-left">
+                    		<input class="file" type="file" id="domimg" onchange="upload()" value= 'downloadURL'>
+                   			</p>
+              			</div>	
+              		</div>
+              	</div>
+
+
+<!-- ..................SECTION TWO..................................................-->
+
+            		<div class="columns">
+      					<div class="column">  
+        					<div class="field">
+                			<label class="label">Package-Price</label>
+                  				<p class="control has-icons-left">
+                    			<input class="input" type="text" placeholder="Enter Package-Price" id="domprice">
+                      				<span class="icon is-small is-left">
+                        				<i class="fa fa-inr"></i>
+                      				</span>
+                   				</p>
+              				</div> 
+              			</div>
+              		</div>
+
+
+              		<div class="columns">
+              			<div class="column">   
+        					<div class="field">
+                			<label class="label">Package-Offer_Prize</label>
+                  				<p class="control has-icons-left">
+                    			<input class="input" type="text" placeholder="Enter Offer Prize....." id="domoffer">
+                      				<span class="icon is-small is-left">
+                        				<i class="fa fa-inr"></i>
+                      				</span>
+                   				</p>
+              				</div>	
+              			</div>
+              		</div>
+
+
+              		<div class="columns">
+              			<div class="column field has-addons">
+              				<div class="field">
+              				<label class="label">Days</label>
+        						<p class="control">
+    								<span class="select">
+      									<select id="domdays">
+        									<option value="1">1</option>
+        									<option value="2">2</option>
+        									<option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+      									</select>
+    								</span>
+  								</p>
+                </div>
+                <div class="field">
+                  <label class="label">Night</label>
+                <p class="control">
+                <span class="select">
+                    <select id="domnight">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                    </select>
+                </span>
+              </p>
+            </div>
+						</div>
+          </div>
+
+
+          <div class="columns">
+            <div class="column">  
+              <div class="field">
+              <label class="label">Transport</label>
+                <p class="control has-icons-left">
+                <input class="checkbox" type="checkbox" id="domflight" value="yes">Flight
+                <br>
+                <input class="checkbox" type="checkbox" id="domtrain" onclick='checkbox(this);' >Train
+                <br>
+                <input class="checkbox" type="checkbox" id="domcar" onchange="checkbox('domcar')" >Car 
+                </p>
+              </div> 
+            </div>
+          </div>
+
+
+          <div class="columns">
+        <div class="column">  
+          <div class="field">
+          <label class="label">Meal plan</label>
+            <p class="control has-icons-left">
+              <input class="checkbox" type="checkbox" id="dombre" value="null" onchange="checkbox()">Breakfast
+              <br>
+              <input class="checkbox" type="checkbox" id="doml" value="null" onchange="checkbox()">Lunch
+              <br>
+              <input class="checkbox" type="checkbox"id="dombru" value="null" onchange="checkbox()">Brunch
+              <br>
+              <input class="checkbox" type="checkbox" id="doms" value="null" onchange="checkbox()">Supper
+              <br>
+              <input class="checkbox" type="checkbox" id="domd" value="null" onchange="checkbox()">Dinner
+              <br>
+            </p>
+          </div> 
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">  
+          <div class="field">
+          <label class="label">Hotel</label>
+            <p class="control has-icons-left">
+              <textarea class="textarea" placeholder="Enter Hotel Detail....." id="domhoteld"></textarea>
+            </p>
+          </div> 
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column field has-addons">
+          <div class="field">
+          <label class="label">Hotel-Rating</label>
+            <p class="control">
+              <span class="select">
+                <select id="domhstar">
+                  <option value="Unrated">Unrated</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="7">7</option>
+                </select>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns">
+        <div class="column">  
+          <div class="field">
+          <label class="label">Package-Detail</label>
+            <p class="control has-icons-left">
+              <textarea class="textarea" placeholder="Enter Package-Detail....." id="domdetails"></textarea>
+            </p>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="columns">
+        <div class="column is-one-third"> 
+          <div class="field">
+            <p class="control">
+              <a href="homepage.html"><input class="button is-primary is-outlined" type="submit" id="submit"></input></a>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column is-one-third"> 
+          <div class="field">
+            <p class="control">
+              <a href="homepage.html"><input class="button is-danger is-outlined" type="submit" value="Cancel"></input></a>
+            </p>
+          </div>
+        </div>
+
+                  
+              		
+				</div>
+			</form>
+    	</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="domastic.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UAx-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="Titlelogo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <style>
+      body,html
+      {
+        background-color: #AAB7B8;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="block" style="width: 50%; margin-left: 300px;">
+        <form id="blog">
+        <div class="box">
+        <h1 class="title is-3" style="text-decoration: underline; text-align: center;">Blog-Detail</h1>
+          <div class="columns">
+            <div class="column">  
+                <div class="field">
+                <label class="label">Blog-id</label>
+                  <p class="control has-icons-left">
+                  <input class="input" type="text" placeholder="Enter Offer-id....." id="bid">
+                    <span class="icon is-small is-left">
+                      <i class="fa-id-badge"></i>
+                    </span>
+                  </p>
+                </div> 
+              </div>
+            </div>
+
+
+            <div class="columns">   
+              <div class="column">   
+                <div class="field">
+                  <label class="label">Blog-Name</label>
+                  <p class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Enter Offer-Name....." id="bname">
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-font"></i>
+                      </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="columns">  
+              <div class="column">   
+                <div class="field">
+                  <label class="label">Blog-Image</label>
+                  <p class="control has-icons-left">
+                    <input class="file" type="file" id="domimg" onchange="upload()" value= 'downloadURL'>
+                  </p>
+                </div>  
+              </div>
+            </div>
+
+
+
+            <div class="columns">
+              <div class="column">   
+                <div class="field">
+                  <label class="label">Blog-Description</label>
+                  <p class="control has-icons-left">
+                    <textarea class="textarea" rows="7" id="bdes"></textarea>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-rss"></i>
+                    </span>
+                  </p>
+                </div>  
+              </div>
+            </div>
+
+
+            <div class="columns">
+              <div class="column">  
+                <div class="field">
+                <label class="label">Date</label>
+                  <p class="control has-icons-left">
+                    <input class="input" type="Date" id="bdate">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </p>
+                </div> 
+              </div>
+            </div>
+
+                  
+            <div class="columns">
+              <div class="column is-one-third"> 
+                <div class="field">
+                  <p class="control">
+                    <a href="homepage.html"><input class="button is-primary is-outlined" type="submit"></input></a>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="column is-one-third"> 
+                <div class="field">
+                  <p class="control">
+                    <a href="homepage.html"><input class="button is-danger is-outlined" type="submit" value="Cancel"></input></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="blog.js"></script>
+  </body>
+</html>
